@@ -343,6 +343,7 @@ main {
     bottom: 0;
 }
 .modal .cerrar-modal {
+    cursor: pointer;
     position: absolute;
     right: 3rem;
     top: 3rem;

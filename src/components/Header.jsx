@@ -1,3 +1,4 @@
+import ControlPresupuesto from "./ControlPresupuesto"
 import NuevoPresupuesto from "./NuevoPresupuesto"
 
 const Header = ({ presupuesto, setPresupuesto, isValidPresupuesto, setIsValidPresupuesto }) => {
@@ -7,15 +8,16 @@ const Header = ({ presupuesto, setPresupuesto, isValidPresupuesto, setIsValidPre
             <h1>Planificador de Gastos</h1>
 
             {isValidPresupuesto ? (
-                <p>Control Presupuestos</p>
+                <ControlPresupuesto 
+                    presupuesto={presupuesto}
+                />
             ) : (
-                console.log('d')
-            )}
-            <NuevoPresupuesto 
+                <NuevoPresupuesto 
                 presupuesto={presupuesto}
                 setPresupuesto={setPresupuesto}
                 setIsValidPresupuesto={setIsValidPresupuesto}
-            />
+                />
+            )}            
         </header> 
     )
 }
