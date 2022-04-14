@@ -77,6 +77,7 @@ const Modal = ({ setModal, animarModal, setAnimarModal, guardarGasto, gastoEdita
                         placeholder='Añade el nombre del Gasto'
                         onChange={e => setNombre(e.target.value)}
                         value={nombre}
+                        autoComplete="off"
                     />
                 </div>
                 <div className="campo">
