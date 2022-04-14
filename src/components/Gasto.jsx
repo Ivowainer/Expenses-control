@@ -1,3 +1,6 @@
+import { LeadingActions, SwipeableList, SwipeableListItem, SwipeAction, TrailingActions } from 'react-swipeable-list'
+import "react-swipeable-list/dist/styles.css"
+
 import { formatearFecha } from "../helpers"
 
 import IconoAhorro from '../img/icono_ahorro.svg'
@@ -19,25 +22,40 @@ const diccionarioIconos = {
 }
 
 const Gasto = ({ gasto }) => {
-  return (
-    <div className="gasto sombra">
-        <div className="contenido-gasto">
-            <img 
-                src={diccionarioIconos[gasto.categoria]} 
-                alt="Icono gasto" 
-            />
-            <div className="descripcion-gasto">
-                <p className="categoria">{gasto.categoria}</p>
-                <p className="nombre-gasto">{gasto.nombre}</p>
-                <p className="fecha-gasto">
-                    Agreado el: {""}
-                    <span>{formatearFecha(gasto.fecha)}</span>
-                </p>
-            </div>
-        </div>
-        <p className="cantidad-gasto">${gasto.cantidad}</p>
-    </div>
-  )
+
+    const leadingActions = () => {
+        console.log('Editar..')
+    }
+    const trailingActions = () => {
+        console.log('Editar..')
+    }
+
+    return (
+        <SwipeableList>
+            <SwipeableListItem
+                leadingActions={leadingActions}
+                trailingActions={trailingActions}
+            >
+                <div className="gasto sombra">
+                    <div className="contenido-gasto">
+                        <img 
+                            src={diccionarioIconos[gasto.categoria]} 
+                            alt="Icono gasto" 
+                        />
+                        <div className="descripcion-gasto">
+                            <p className="categoria">{gasto.categoria}</p>
+                            <p className="nombre-gasto">{gasto.nombre}</p>
+                            <p className="fecha-gasto">
+                                Agreado el: {""}
+                                <span>{formatearFecha(gasto.fecha)}</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p className="cantidad-gasto">${gasto.cantidad}</p>
+                </div>
+            </SwipeableListItem>
+        </SwipeableList>
+    )
 }
 
 export default Gasto
