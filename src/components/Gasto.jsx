@@ -62,7 +62,10 @@ const Gasto = ({ gasto, setGastoEditar, eliminarGasto }) => {
                             </p>
                         </div>
                     </div>
-                    <p className="cantidad-gasto">${gasto.cantidad}</p>
+                    <div className="gastos-parr">
+                        <p className="cantidad-gasto">${gasto.cantidad}</p>
+                        <p>Desliza hacía los lados para editar o eliminar</p>
+                    </div>
                 </div>
             </SwipeableListItem>
         </SwipeableList>
