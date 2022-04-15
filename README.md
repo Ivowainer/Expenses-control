@@ -8,7 +8,6 @@ This is a real project with React.
 - 📈 With tracking in percentage and graph
 - 💾 This works with LocalStorage, means that the information is saved
 - 📝 It is a CRUD, it can be created, read, updated and deleted
-- 📱 Responsive and flexible website
 - 🖥️ With a beautiful dashboard
 - 📫 How to reach me: [Gmail](mailto:ivancamposwainer@gmail.com)
 
